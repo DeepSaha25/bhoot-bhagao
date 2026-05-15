@@ -1,0 +1,66 @@
+[
+  {
+    "id": "bb-hanuman-chalisa",
+    "title": "Hanuman Chalisa",
+    "faith": "Hinduism",
+    "artist": "Devotional prayer",
+    "duration": 36,
+    "tone": 261.63
+  },
+  {
+    "id": "bb-gayatri-mantra",
+    "title": "Gayatri Mantra",
+    "faith": "Hinduism",
+    "artist": "Sacred mantra",
+    "duration": 34,
+    "tone": 329.63
+  },
+  {
+    "id": "bb-maha-mrityunjaya",
+    "title": "Maha Mrityunjaya Mantra",
+    "faith": "Hinduism",
+    "artist": "Healing mantra",
+    "duration": 38,
+    "tone": 293.66
+  },
+  {
+    "id": "bb-ayatul-kursi",
+    "title": "Ayatul Kursi",
+    "faith": "Islam",
+    "artist": "Quranic recitation",
+    "duration": 35,
+    "tone": 220
+  },
+  {
+    "id": "bb-surah-rahman",
+    "title": "Surah Rahman",
+    "faith": "Islam",
+    "artist": "Peaceful recitation",
+    "duration": 40,
+    "tone": 246.94
+  },
+  {
+    "id": "bb-gurbani-kirtan",
+    "title": "Gurbani Kirtan",
+    "faith": "Sikhism",
+    "artist": "Kirtan meditation",
+    "duration": 39,
+    "tone": 349.23
+  },
+  {
+    "id": "bb-christian-choir",
+    "title": "Christian Choir Hymns",
+    "faith": "Christianity",
+    "artist": "Choir ambience",
+    "duration": 37,
+    "tone": 392
+  },
+  {
+    "id": "bb-buddhist-chants",
+    "title": "Buddhist Chants",
+    "faith": "Buddhism",
+    "artist": "Mindful chant",
+    "duration": 36,
+    "tone": 174
+  }
+]

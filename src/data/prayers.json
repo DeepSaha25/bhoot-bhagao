@@ -1,0 +1,74 @@
+[
+  {
+    "id": "hanuman-chalisa",
+    "title": "Hanuman Chalisa",
+    "faith": "Hinduism",
+    "category": "Strength",
+    "duration": 240,
+    "text": "A devotional hymn for courage, protection, devotion, and steady faith.",
+    "audio": ""
+  },
+  {
+    "id": "gayatri-mantra",
+    "title": "Gayatri Mantra",
+    "faith": "Hinduism",
+    "category": "Light",
+    "duration": 180,
+    "text": "A sacred mantra invoking wisdom, clarity, and inner illumination.",
+    "audio": ""
+  },
+  {
+    "id": "maha-mrityunjaya",
+    "title": "Maha Mrityunjaya Mantra",
+    "faith": "Hinduism",
+    "category": "Healing",
+    "duration": 210,
+    "text": "A mantra traditionally associated with healing, courage, and release from fear.",
+    "audio": ""
+  },
+  {
+    "id": "ayatul-kursi",
+    "title": "Ayatul Kursi",
+    "faith": "Islam",
+    "category": "Protection",
+    "duration": 150,
+    "text": "A revered Quranic verse often recited for remembrance, trust, and protection.",
+    "audio": ""
+  },
+  {
+    "id": "surah-rahman",
+    "title": "Surah Rahman",
+    "faith": "Islam",
+    "category": "Mercy",
+    "duration": 360,
+    "text": "A chapter known for its beautiful reflection on mercy and divine generosity.",
+    "audio": ""
+  },
+  {
+    "id": "gurbani-kirtan",
+    "title": "Gurbani Kirtan",
+    "faith": "Sikhism",
+    "category": "Devotion",
+    "duration": 300,
+    "text": "Sacred singing that brings remembrance, humility, and peace to the heart.",
+    "audio": ""
+  },
+  {
+    "id": "psalm-prayers",
+    "title": "Psalm Prayers",
+    "faith": "Christianity",
+    "category": "Hope",
+    "duration": 220,
+    "text": "Scriptural prayers of comfort, trust, gratitude, and refuge.",
+    "audio": ""
+  },
+  {
+    "id": "buddhist-chants",
+    "title": "Buddhist Chants",
+    "faith": "Buddhism",
+    "category": "Mindfulness",
+    "duration": 260,
+    "text": "Gentle chants supporting mindful breathing, compassion, and centered attention.",
+    "audio": ""
+  }
+]
