@@ -3,9 +3,10 @@
     "id": "bb-hanuman-chalisa",
     "title": "Hanuman Chalisa",
     "faith": "Hinduism",
-    "artist": "Generated fallback until a free licensed Chalisa recording is added",
-    "duration": 36,
-    "tone": 261.63
+    "artist": "Local devotional audio",
+    "duration": 568,
+    "tone": 261.63,
+    "asset": "hanuman-chalisa-lyrics-download.mp3"
   },
   {
     "id": "bb-gayatri-mantra",
