@@ -1,4 +1,4 @@
-import { Church, Heart, Landmark, ListMusic, Music, Pause, Play, Search, SkipBack, SkipForward, Sparkles, Volume2, Waves } from 'lucide-react';
+import { Church, Heart, Landmark, ListMusic, Music, Pause, Play, Search, Shield, SkipBack, SkipForward, Volume2, Waves } from 'lucide-react';
 import { memo, useMemo, useState } from 'react';
 import prayers from '../data/prayers.json';
 import { formatTime } from '../utils/formatTime.js';
@@ -32,7 +32,7 @@ const MemoPrayerRow = memo(PrayerRow);
 
 const resonanceTiles = [
   { label: 'Hanuman Chalisa', icon: Landmark },
-  { label: 'Ayatul Kursi', icon: Sparkles },
+  { label: 'Ayatul Kursi', icon: Shield },
   { label: 'Gregorian Chants', icon: Church },
   { label: 'Om Chanting', icon: Waves },
 ];

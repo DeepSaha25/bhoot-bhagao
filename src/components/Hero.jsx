@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { ShieldCheck } from 'lucide-react';
 
 export default function Hero({ onOpenSpiritualMode }) {
   return (
@@ -8,15 +7,8 @@ export default function Hero({ onOpenSpiritualMode }) {
       <div className="absolute inset-x-0 top-0 h-px bg-[#f2ca50]/20" aria-hidden="true" />
       <div className="section-shell relative">
         <div className="mx-auto max-w-5xl text-center">
-          <motion.p
-            className="stitch-pill mx-auto mb-8 inline-flex items-center gap-3 rounded-full px-5 py-2 text-sm font-bold text-[#f2ca50]"
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <ShieldCheck size={18} aria-hidden="true" /> Trusted Spiritual Protection
-          </motion.p>
           <motion.h1
-            className="font-display text-5xl font-bold leading-tight tracking-[-0.04em] text-[#eae1d4] sm:text-6xl md:text-7xl"
+            className="font-display text-3xl font-bold leading-tight tracking-[-0.02em] text-[#eae1d4] sm:text-4xl md:text-5xl"
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.08 }}
@@ -36,7 +28,7 @@ export default function Hero({ onOpenSpiritualMode }) {
             >
               <span className="absolute inset-0 -translate-x-full bg-[linear-gradient(110deg,transparent,rgba(255,255,255,.56),transparent)] transition duration-700 group-hover:translate-x-full" />
               <span className="relative flex items-center justify-center gap-3">
-                Activate Bhoot Bhagao <ShieldCheck size={19} aria-hidden="true" />
+                Activate Bhoot Bhagao
               </span>
             </button>
           </motion.div>

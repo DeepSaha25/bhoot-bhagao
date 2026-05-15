@@ -1,25 +1,20 @@
 import { motion } from 'framer-motion';
-import { Sparkles } from 'lucide-react';
 
 export default function LoadingScreen() {
   return (
     <motion.div
       className="fixed inset-0 z-[80] grid place-items-center bg-[#050608] text-amber-100"
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.45 }}
+      transition={{ duration: 0.35 }}
       role="status"
-      aria-label="Loading Bhoot Bhagao"
+      aria-label="Loading"
     >
       <div className="text-center">
-        <motion.div
-          className="mx-auto mb-5 grid h-24 w-24 place-items-center rounded-full bg-gradient-to-br from-amber-200 to-emerald-300 text-black shadow-[0_0_80px_rgba(245,158,11,.5)]"
-          animate={{ scale: [0.92, 1.08, 0.92], rotate: [0, 8, 0] }}
-          transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
-        >
-          <Sparkles aria-hidden="true" />
-        </motion.div>
-        <p className="font-display text-3xl font-extrabold gold-text">Bhoot Bhagao</p>
-        <p className="mt-2 text-sm text-white/48">Opening a calm cinematic space...</p>
+        <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-[#0b0b0b] ring-1 ring-white/6">
+          <span className="font-display text-xl font-bold text-[#f2ca50]">BB</span>
+        </div>
+        <p className="font-display text-2xl font-semibold text-[#eae1d4]">Bhoot Bhagao</p>
+        <p className="mt-2 text-sm text-white/48">Loading…</p>
       </div>
     </motion.div>
   );

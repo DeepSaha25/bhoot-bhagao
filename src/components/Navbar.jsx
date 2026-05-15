@@ -1,4 +1,4 @@
-import { Menu, Moon, Sparkles, Sun, X } from 'lucide-react';
+import { Menu, Moon, Sun, X } from 'lucide-react';
 import { useState } from 'react';
 
 const links = [
@@ -37,7 +37,7 @@ export default function Navbar({ dark, onToggleTheme }) {
             className="grid h-11 w-11 place-items-center rounded-full text-[#f2ca50] transition hover:scale-105"
             aria-label={dark ? 'Use light mode' : 'Use dark mode'}
           >
-            {dark ? <Sparkles size={25} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
+            {dark ? <Sun size={20} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
           </button>
           <button
             type="button"

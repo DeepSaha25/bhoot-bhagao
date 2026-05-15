@@ -109,9 +109,7 @@ select {
 
   .noisy {
     background-image:
-      radial-gradient(circle at 24% 20%, rgba(242, 202, 80, 0.1), transparent 24rem),
-      radial-gradient(circle at 88% 12%, rgba(0, 53, 190, 0.12), transparent 34rem),
-      radial-gradient(circle at 76% 72%, rgba(80, 200, 120, 0.08), transparent 28rem),
+      radial-gradient(circle at 50% 0%, rgba(242, 202, 80, 0.08), transparent 34rem),
       linear-gradient(180deg, #16130b 0%, #110e07 100%);
   }
 
@@ -130,30 +128,12 @@ select {
   }
 }
 
-@keyframes auroraShift {
-  0%, 100% { transform: translate3d(-2%, -2%, 0) rotate(0deg) scale(1); }
-  50% { transform: translate3d(2%, 2%, 0) rotate(4deg) scale(1.04); }
-}
-
 @keyframes equalize {
   0%, 100% { transform: scaleY(0.36); opacity: 0.58; }
   50% { transform: scaleY(1); opacity: 1; }
 }
 
-@keyframes haloPulse {
-  0%, 100% { transform: scale(0.92); opacity: 0.72; }
-  50% { transform: scale(1.08); opacity: 1; }
-}
-
-.aurora-motion {
-  animation: auroraShift 18s ease-in-out infinite;
-}
-
 .eq-bar {
   transform-origin: bottom;
   animation: equalize 1.25s ease-in-out infinite;
-}
-
-.halo-pulse {
-  animation: haloPulse 4.8s ease-in-out infinite;
 }
