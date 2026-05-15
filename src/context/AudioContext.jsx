@@ -3,6 +3,15 @@ import playlist from '../data/playlist.json';
 import { createToneUrl } from '../utils/createToneUrl.js';
 
 const AudioStateContext = createContext(null);
+const audioAssets = import.meta.glob('../assets/audio/*', { eager: true, query: '?url', import: 'default' });
+
+function getTrackSource(track) {
+  if (track.audio) return track.audio;
+  if (track.asset) {
+    return audioAssets[`../assets/audio/${track.asset}`] || createToneUrl(track);
+  }
+  return createToneUrl(track);
+}
 
 export function AudioProvider({ children }) {
   const audioRef = useRef(null);
@@ -57,7 +66,7 @@ export function AudioProvider({ children }) {
       const finishLoad = async () => {
         trackIndexRef.current = nextIndex;
         setTrackIndex(nextIndex);
-        audio.src = nextTrack.audio || createToneUrl(nextTrack);
+        audio.src = getTrackSource(nextTrack);
         audio.load();
         audio.volume = 0;
         if (autoplay) {
@@ -88,7 +97,7 @@ export function AudioProvider({ children }) {
     const audio = audioRef.current;
     if (!audio) return;
     if (!audio.src) {
-      audio.src = currentTrack.audio || createToneUrl(currentTrack);
+      audio.src = getTrackSource(currentTrack);
       audio.load();
     }
     try {

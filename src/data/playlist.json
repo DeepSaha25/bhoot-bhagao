@@ -3,7 +3,7 @@
     "id": "bb-hanuman-chalisa",
     "title": "Hanuman Chalisa",
     "faith": "Hinduism",
-    "artist": "Devotional prayer",
+    "artist": "Generated fallback until a free licensed Chalisa recording is added",
     "duration": 36,
     "tone": 261.63
   },
@@ -11,56 +11,63 @@
     "id": "bb-gayatri-mantra",
     "title": "Gayatri Mantra",
     "faith": "Hinduism",
-    "artist": "Sacred mantra",
-    "duration": 34,
-    "tone": 329.63
+    "artist": "Wilfredor / Wikimedia Commons",
+    "duration": 21,
+    "tone": 329.63,
+    "asset": "gayatri-mantra.ogg"
   },
   {
     "id": "bb-maha-mrityunjaya",
     "title": "Maha Mrityunjaya Mantra",
     "faith": "Hinduism",
-    "artist": "Healing mantra",
-    "duration": 38,
-    "tone": 293.66
+    "artist": "Rameshvar / Wikimedia Commons",
+    "duration": 18,
+    "tone": 293.66,
+    "asset": "maha-mrityunjaya.ogg"
   },
   {
     "id": "bb-ayatul-kursi",
     "title": "Ayatul Kursi",
     "faith": "Islam",
-    "artist": "Quranic recitation",
-    "duration": 35,
-    "tone": 220
+    "artist": "Saud Al-Shuraim / Wikimedia Commons",
+    "duration": 38,
+    "tone": 220,
+    "asset": "ayatul-kursi.wav"
   },
   {
     "id": "bb-surah-rahman",
     "title": "Surah Rahman",
     "faith": "Islam",
-    "artist": "Peaceful recitation",
-    "duration": 40,
-    "tone": 246.94
+    "artist": "Mohamed Siddiq El-Minshawi / Wikimedia Commons",
+    "duration": 532,
+    "tone": 246.94,
+    "asset": "surah-rahman.ogg"
   },
   {
     "id": "bb-gurbani-kirtan",
-    "title": "Gurbani Kirtan",
-    "faith": "Sikhism",
-    "artist": "Kirtan meditation",
-    "duration": 39,
-    "tone": 349.23
+    "title": "Kirtan Devotional Chant",
+    "faith": "Sikhism / Bhakti",
+    "artist": "Subhashish Panigrahi / Wikimedia Commons",
+    "duration": 89,
+    "tone": 349.23,
+    "asset": "kirtan-hindi.ogg"
   },
   {
     "id": "bb-christian-choir",
-    "title": "Christian Choir Hymns",
+    "title": "Christian Hymn - Amazing Grace",
     "faith": "Christianity",
-    "artist": "Choir ambience",
-    "duration": 37,
-    "tone": 392
+    "artist": "Rocks From The Garden / Wikimedia Commons",
+    "duration": 174,
+    "tone": 392,
+    "asset": "christian-hymn-amazing-grace.ogg"
   },
   {
     "id": "bb-buddhist-chants",
     "title": "Buddhist Chants",
     "faith": "Buddhism",
-    "artist": "Mindful chant",
-    "duration": 36,
-    "tone": 174
+    "artist": "Buddham Saranam Gacchami / Wikimedia Commons",
+    "duration": 379,
+    "tone": 174,
+    "asset": "buddhist-chant-buddham-saranam.oga"
   }
 ]
