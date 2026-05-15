@@ -14,16 +14,16 @@ export default function Navbar({ dark, onToggleTheme }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4">
-      <nav className="stitch-pill mt-5 flex h-[72px] w-full max-w-5xl items-center justify-between rounded-full px-5 sm:px-7" aria-label="Main navigation">
+    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-3 sm:px-4">
+      <nav className="stitch-pill mt-3 flex h-16 w-full max-w-5xl items-center justify-between rounded-full px-4 sm:mt-5 sm:h-[72px] sm:px-7" aria-label="Main navigation">
         <a href="#home" className="group flex items-center gap-3 rounded-full text-[#f2ca50]">
-          <span className="font-display text-2xl font-bold tracking-[-0.04em] md:text-3xl">Bhoot Bhagao</span>
+          <span className="font-display text-xl font-bold tracking-[-0.04em] sm:text-2xl md:text-3xl">Bhoot Bhagao</span>
         </a>
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-1 lg:gap-2 md:flex">
           {links.map(([label, href]) => (
             <a
               key={`${label}-${href}`}
-              className="rounded-full px-4 py-2 font-display text-base font-bold text-[#d0c5af] transition duration-300 hover:text-[#f2ca50]"
+              className="rounded-full px-3 py-2 font-display text-sm font-bold text-[#d0c5af] transition duration-300 hover:text-[#f2ca50] lg:px-4 lg:text-base"
               href={href}
             >
               {label}
@@ -34,7 +34,7 @@ export default function Navbar({ dark, onToggleTheme }) {
           <button
             type="button"
             onClick={onToggleTheme}
-            className="grid h-11 w-11 place-items-center rounded-full text-[#f2ca50] transition hover:scale-105"
+            className="grid h-10 w-10 place-items-center rounded-full text-[#f2ca50] transition hover:scale-105 sm:h-11 sm:w-11"
             aria-label={dark ? 'Use light mode' : 'Use dark mode'}
           >
             {dark ? <Sun size={20} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
@@ -51,7 +51,7 @@ export default function Navbar({ dark, onToggleTheme }) {
         </div>
       </nav>
       {open && (
-        <div className="section-shell mt-3 grid gap-2 rounded-3xl border border-[#f2ca50]/15 bg-[#110e07]/90 p-3 backdrop-blur-2xl md:hidden">
+        <div className="section-shell mt-2 grid gap-2 rounded-3xl border border-[#f2ca50]/15 bg-[#110e07]/90 p-3 backdrop-blur-2xl md:hidden">
           {links.map(([label, href]) => (
             <a
               key={href}

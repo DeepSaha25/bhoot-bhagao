@@ -22,23 +22,23 @@ export default function EmergencyCalm() {
   };
 
   return (
-    <section id="calm" className="relative z-20 py-24">
+    <section id="calm" className="relative z-20 py-18 sm:py-24">
       <div className="section-shell">
         <SectionHeading eyebrow="Emergency calm" title="A soft minute for your nervous system">
           A simple breathing space for anxious moments. This is emotional support, not medical care.
         </SectionHeading>
-        <div className="reveal premium-glass mx-auto grid max-w-6xl gap-8 overflow-hidden rounded-[2.5rem] p-6 md:grid-cols-[0.9fr_1.1fr] md:p-8">
+        <div className="reveal premium-glass mx-auto grid max-w-6xl gap-6 overflow-hidden rounded-[2.2rem] p-5 sm:p-6 md:grid-cols-[0.9fr_1.1fr] md:p-8">
           <div className="grid place-items-center">
-            <div className="relative grid h-72 w-72 place-items-center">
+            <div className="relative grid h-56 w-56 place-items-center sm:h-64 sm:w-64 md:h-72 md:w-72">
               <div className="absolute inset-0 animate-breathe rounded-full bg-gradient-to-br from-amber-200/35 via-white/10 to-emerald-300/25 shadow-[0_0_80px_rgba(245,158,11,.24)]" />
-              <div className="relative grid h-44 w-44 place-items-center rounded-full border border-white/10 bg-white/8 text-center backdrop-blur-xl">
-                <span className="px-6 font-display text-3xl font-extrabold text-white">Breathe Slowly</span>
+              <div className="relative grid h-36 w-36 place-items-center rounded-full border border-white/10 bg-white/8 text-center backdrop-blur-xl sm:h-40 sm:w-40 md:h-44 md:w-44">
+                <span className="px-4 font-display text-2xl font-extrabold text-white sm:px-6 sm:text-3xl">Breathe Slowly</span>
               </div>
             </div>
           </div>
           <div className="flex flex-col justify-center">
             <p className="text-xs font-black uppercase tracking-[0.28em] text-emerald-200/80">You are safe</p>
-            <h3 className="mt-3 font-display text-4xl font-extrabold leading-tight tracking-[-0.03em] text-white md:text-5xl">Look around. Feel the ground. Let the breath soften.</h3>
+            <h3 className="mt-3 font-display text-3xl font-extrabold leading-tight tracking-[-0.03em] text-white sm:text-4xl md:text-5xl">Look around. Feel the ground. Let the breath soften.</h3>
             <div className="mt-6 grid gap-3 text-white/60">
               <p>Name five things you can see.</p>
               <p>Notice four things you can feel.</p>
