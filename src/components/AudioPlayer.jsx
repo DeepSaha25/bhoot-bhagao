@@ -4,9 +4,20 @@ import prayers from '../data/prayers.json';
 import { formatTime } from '../utils/formatTime.js';
 import SectionHeading from './SectionHeading.jsx';
 
-function PrayerRow({ prayer, active, favorite, onFavorite }) {
+function PrayerRow({ prayer, active, favorite, onFavorite, onClick }) {
   return (
-    <article className={`rounded-3xl border p-4 transition duration-300 ${active ? 'border-amber-200/35 bg-amber-200/10 shadow-[0_0_36px_rgba(245,158,11,.12)]' : 'border-white/10 bg-white/[0.045] hover:bg-white/[0.075]'}`}>
+    <article
+      className={`cursor-pointer rounded-3xl border p-4 transition duration-300 ${active ? 'border-amber-200/35 bg-amber-200/10 shadow-[0_0_36px_rgba(245,158,11,.12)]' : 'border-white/10 bg-white/[0.045] hover:bg-white/[0.075]'}`}
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          onClick?.();
+        }
+      }}
+    >
       <div className="flex items-start justify-between gap-4">
         <div>
           <h3 className="font-bold text-white">{prayer.title}</h3>
@@ -17,7 +28,10 @@ function PrayerRow({ prayer, active, favorite, onFavorite }) {
         </div>
         <button
           type="button"
-          onClick={() => onFavorite(prayer.id)}
+          onClick={(event) => {
+            event.stopPropagation();
+            onFavorite(prayer.id);
+          }}
           className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/10 bg-white/8 text-rose-200 transition hover:bg-white/14"
           aria-label={favorite ? `Remove ${prayer.title} from favorites` : `Add ${prayer.title} to favorites`}
         >
@@ -54,6 +68,10 @@ export default function AudioPlayer({ audio }) {
 
   const toggleFavorite = (id) => {
     setFavorites((items) => (items.includes(id) ? items.filter((item) => item !== id) : [...items, id]));
+  };
+
+  const handlePrayerClick = (prayer) => {
+    audio.playTrack?.(prayer.id);
   };
 
   return (
@@ -228,6 +246,7 @@ export default function AudioPlayer({ audio }) {
                   active={audio.currentTrack.title === prayer.title}
                   favorite={favorites.includes(prayer.id)}
                   onFavorite={toggleFavorite}
+                  onClick={() => handlePrayerClick(prayer)}
                 />
               ))}
             </div>

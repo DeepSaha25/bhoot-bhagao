@@ -5,6 +5,10 @@ import { createToneUrl } from '../utils/createToneUrl.js';
 const AudioStateContext = createContext(null);
 const audioAssets = import.meta.glob('../assets/audio/*', { eager: true, query: '?url', import: 'default' });
 
+function normalizeTrackKey(value) {
+  return value.toLowerCase().replace(/^bb-/, '').replace(/[^a-z0-9]+/g, '-');
+}
+
 function getTrackSource(track) {
   if (track.audio) return track.audio;
   if (track.asset) {
@@ -27,6 +31,15 @@ export function AudioProvider({ children }) {
   const [duration, setDuration] = useState(0);
 
   const currentTrack = playlist[trackIndex];
+
+  const findTrackIndex = useCallback((identifier) => {
+    const key = normalizeTrackKey(identifier);
+    const index = playlist.findIndex((track) => {
+      return normalizeTrackKey(track.id) === key || normalizeTrackKey(track.title) === key;
+    });
+
+    return index;
+  }, []);
 
   const clearFade = useCallback(() => {
     if (fadeRef.current) {
@@ -126,6 +139,22 @@ export function AudioProvider({ children }) {
     loadTrack(trackIndex - 1, true);
   }, [loadTrack, trackIndex]);
 
+  const playTrack = useCallback(
+    (identifier) => {
+      const index = findTrackIndex(identifier);
+      if (index === -1) return;
+
+      if (index === trackIndex) {
+        if (isPlaying) return;
+        play();
+        return;
+      }
+
+      loadTrack(index, true);
+    },
+    [findTrackIndex, isPlaying, loadTrack, play, trackIndex],
+  );
+
   const toggle = useCallback(() => {
     if (isPlaying) pause();
     else play();
@@ -199,12 +228,13 @@ export function AudioProvider({ children }) {
       toggle,
       next,
       previous,
+      playTrack,
       seek,
       setVolume,
       setLoop,
       startSpiritualMode: play,
     }),
-    [currentTrack, duration, isPlaying, loop, next, pause, play, previous, progress, seek, toggle, trackIndex, volume],
+    [currentTrack, duration, isPlaying, loop, next, pause, play, playTrack, previous, progress, seek, toggle, trackIndex, volume],
   );
 
   return <AudioStateContext.Provider value={value}>{children}</AudioStateContext.Provider>;

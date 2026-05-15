@@ -31,7 +31,8 @@ export default function Footer() {
         </div>
       </div>
       <p className="section-shell mt-8 flex items-center gap-2 text-xs text-white/38">
-        Made with <Heart size={14} aria-hidden="true" /> for calm, respect, and unity.
+        Made with <Heart size={14} aria-hidden="true" /> for calm, respect, and unity. 
+        <p>BY DEEP SAHA</p>
       </p>
     </footer>
   );
