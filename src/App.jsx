@@ -5,7 +5,6 @@ import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import LoadingScreen from './components/LoadingScreen.jsx';
 import AmbientCursor from './components/AmbientCursor.jsx';
-import Particles from './components/Particles.jsx';
 import { AudioProvider } from './context/AudioContext.jsx';
 
 export default function App() {
@@ -25,7 +24,6 @@ export default function App() {
     <AudioProvider>
       <div className="min-h-screen overflow-x-hidden bg-[#16130b] text-[#eae1d4] transition-colors duration-500">
         <AnimatePresence>{!ready && <LoadingScreen />}</AnimatePresence>
-        <Particles />
         <AmbientCursor />
         <Navbar dark={dark} onToggleTheme={() => setDark((value) => !value)} />
         <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7 }}>

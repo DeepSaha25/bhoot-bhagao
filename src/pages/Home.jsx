@@ -31,18 +31,8 @@ export default function Home() {
 
   return (
     <>
-      <Hero audio={audio} onOpenSpiritualMode={openSpiritualMode} />
+      <Hero onOpenSpiritualMode={openSpiritualMode} />
       <ReligionCards />
-      <div className="relative z-20 flex justify-center px-4 pb-28">
-        <button
-          type="button"
-          onClick={openSpiritualMode}
-          className="group relative overflow-hidden rounded-full bg-gradient-to-r from-[#f2ca50] to-[#d4af37] px-12 py-5 font-display text-lg font-bold tracking-wide text-[#3c2f00] shadow-[0_0_34px_rgba(242,202,80,0.28)] transition duration-500 hover:scale-105"
-        >
-          <span className="absolute inset-0 -translate-x-full bg-[linear-gradient(110deg,transparent,rgba(255,255,255,.48),transparent)] transition duration-700 group-hover:translate-x-full" />
-          <span className="relative">Activate Bhoot Bhagao</span>
-        </button>
-      </div>
       <AudioPlayer audio={audio} />
       <DailyPeace />
       <EmergencyCalm />

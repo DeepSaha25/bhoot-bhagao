@@ -1,15 +1,20 @@
 import { motion } from 'framer-motion';
-import { ShieldCheck, Sparkles } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 export default function Hero({ onOpenSpiritualMode }) {
   return (
     <section id="home" className="relative z-20 overflow-hidden px-4 pb-12 pt-36 md:pt-40">
       <div className="absolute inset-0 noisy" aria-hidden="true" />
-      <div className="ambient-grid absolute inset-0 opacity-70" aria-hidden="true" />
-      <div className="aurora-motion absolute left-1/2 top-20 h-[42rem] w-[84rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(242,202,80,.12),transparent_58%)] blur-[120px]" aria-hidden="true" />
+      <div className="absolute inset-x-0 top-0 h-px bg-[#f2ca50]/20" aria-hidden="true" />
       <div className="section-shell relative">
         <div className="mx-auto max-w-5xl text-center">
-         
+          <motion.p
+            className="stitch-pill mx-auto mb-8 inline-flex items-center gap-3 rounded-full px-5 py-2 text-sm font-bold text-[#f2ca50]"
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <ShieldCheck size={18} aria-hidden="true" /> Trusted Spiritual Protection
+          </motion.p>
           <motion.h1
             className="font-display text-5xl font-bold leading-tight tracking-[-0.04em] text-[#eae1d4] sm:text-6xl md:text-7xl"
             initial={{ opacity: 0, y: 22 }}
@@ -35,11 +40,6 @@ export default function Hero({ onOpenSpiritualMode }) {
               </span>
             </button>
           </motion.div>
-        </div>
-        <div className="pointer-events-none absolute inset-0 opacity-30 mix-blend-screen" aria-hidden="true">
-          <Sparkles className="absolute left-[12%] top-[20%] text-[#f2ca50]" size={10} />
-          <Sparkles className="absolute right-[18%] top-[40%] text-[#f2ca50]" size={12} />
-          <Sparkles className="absolute left-[48%] top-[58%] text-[#f2ca50]" size={9} />
         </div>
       </div>
     </section>
